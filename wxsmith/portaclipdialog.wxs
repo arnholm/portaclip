@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<wxsmith>
+	<object class="wxDialog" name="portaclipDialog">
+		<title>Portaclip</title>
+		<style>wxDEFAULT_DIALOG_STYLE|wxMINIMIZE_BOX</style>
+		<object class="wxBoxSizer" variable="BoxSizer1" member="yes">
+			<orient>wxVERTICAL</orient>
+			<object class="sizeritem">
+				<object class="wxStaticText" name="ID_STATICTEXT1" variable="StaticText1" member="yes">
+					<label>Portaclip</label>
+					<font>
+						<size>10</size>
+						<style>normal</style>
+						<weight>normal</weight>
+						<underlined>0</underlined>
+						<family>swiss</family>
+						<face>Noto Sans</face>
+					</font>
+				</object>
+				<flag>wxALL|wxEXPAND</flag>
+				<border>10</border>
+				<option>1</option>
+			</object>
+			<object class="sizeritem">
+				<object class="wxBoxSizer" variable="BoxSizer3" member="no">
+					<object class="sizeritem">
+						<object class="wxStaticText" name="ID_STATICTEXT2" variable="StaticText2" member="yes">
+							<label>SendTo IP</label>
+						</object>
+						<flag>wxTOP|wxBOTTOM|wxLEFT|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL</flag>
+						<border>5</border>
+					</object>
+					<object class="sizeritem">
+						<object class="wxTextCtrl" name="ID_TEXTCTRL1" variable="m_sendtoIP" member="yes">
+							<value>255.255.255.0</value>
+						</object>
+						<flag>wxTOP|wxBOTTOM|wxLEFT|wxALIGN_TOP</flag>
+						<border>5</border>
+						<option>1</option>
+					</object>
+					<object class="sizeritem">
+						<object class="wxButton" name="ID_BUTTON3" variable="Button3" member="yes">
+							<label>Update IP</label>
+							<handler function="OnUpdateClick" entry="EVT_BUTTON" />
+						</object>
+						<flag>wxTOP|wxBOTTOM|wxRIGHT|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL</flag>
+						<border>5</border>
+					</object>
+				</object>
+				<flag>wxTOP|wxLEFT|wxRIGHT|wxEXPAND</flag>
+				<border>5</border>
+			</object>
+			<object class="sizeritem">
+				<object class="wxBoxSizer" variable="BoxSizer2" member="no">
+					<object class="sizeritem">
+						<object class="wxCheckBox" name="ID_CHECKBOX1" variable="m_auto_copy" member="yes">
+							<label>Auto copy (mouse)</label>
+							<checked>1</checked>
+						</object>
+						<flag>wxLEFT|wxRIGHT|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL</flag>
+						<border>5</border>
+						<option>1</option>
+					</object>
+					<object class="sizeritem">
+						<object class="wxButton" name="ID_BUTTON1" variable="ForceCopyButton" member="yes">
+							<label>Force Copy</label>
+							<handler function="OnForceCopyButtonClick" entry="EVT_BUTTON" />
+						</object>
+						<flag>wxLEFT|wxRIGHT|wxALIGN_TOP</flag>
+						<border>5</border>
+					</object>
+				</object>
+				<flag>wxBOTTOM|wxLEFT|wxRIGHT|wxEXPAND</flag>
+				<border>5</border>
+			</object>
+		</object>
+		<object class="wxTimer" name="ID_TIMER1" variable="Timer1" member="yes">
+			<handler function="OnTimer1Trigger" entry="EVT_TIMER" />
+		</object>
+	</object>
+</wxsmith>
