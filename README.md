@@ -13,3 +13,5 @@ Linux | Windows
 ------------ | -------------
 ![portaclip_linux](/images/portaclip_linux.png)| ![portaclip_windows](/images/portaclip_windows.png)
 
+# Compiled binaries
+For compiled binaries, check releases at https://github.com/arnholm/portaclip/releases
