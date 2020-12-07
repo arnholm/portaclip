@@ -75,7 +75,7 @@
 				<Option compiler="gcc_generic" />
 				<Option projectLinkerOptionsRelation="2" />
 				<Compiler>
-					<Add option="-std=c++0x" />
+					<Add option="-std=c++11" />
 					<Add option="-W" />
 					<Add option="-fPIC" />
 					<Add option="-DNOPCH" />
@@ -96,7 +96,7 @@
 				<Option projectLinkerOptionsRelation="2" />
 				<Compiler>
 					<Add option="-Os" />
-					<Add option="-std=c++0x" />
+					<Add option="-std=c++11" />
 					<Add option="-W" />
 					<Add option="-fPIC" />
 					<Add option="-fexceptions" />
