@@ -21,12 +21,12 @@
 using namespace std;
 
 //(*Headers(portaclipDialog)
+#include <wx/button.h>
+#include <wx/checkbox.h>
+#include <wx/dialog.h>
 #include <wx/sizer.h>
 #include <wx/stattext.h>
 #include <wx/textctrl.h>
-#include <wx/checkbox.h>
-#include <wx/button.h>
-#include <wx/dialog.h>
 #include <wx/timer.h>
 //*)
 
@@ -57,13 +57,13 @@ private:
    //*)
 
    //(*Declarations(portaclipDialog)
-   wxTextCtrl* m_sendtoIP;
-   wxStaticText* StaticText2;
+   wxBoxSizer* BoxSizer1;
+   wxButton* Button3;
+   wxButton* ForceCopyButton;
    wxCheckBox* m_auto_copy;
    wxStaticText* StaticText1;
-   wxButton* Button3;
-   wxBoxSizer* BoxSizer1;
-   wxButton* ForceCopyButton;
+   wxStaticText* StaticText2;
+   wxTextCtrl* m_sendtoIP;
    wxTimer Timer1;
    //*)
 
