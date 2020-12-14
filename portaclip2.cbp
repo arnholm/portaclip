@@ -2,12 +2,12 @@
 <CodeBlocks_project_file>
 	<FileVersion major="1" minor="6" />
 	<Project>
-		<Option title="portaclip" />
+		<Option title="portaclip2" />
 		<Option pch_mode="2" />
 		<Option compiler="msvc" />
 		<Build>
 			<Target title="MSVC_Debug">
-				<Option output=".cmp/msvc/bin/Debug/portaclipd" prefix_auto="0" extension_auto="1" />
+				<Option output=".cmp/msvc/bin/Debug/portaclip2d" prefix_auto="0" extension_auto="1" />
 				<Option object_output=".cmp/msvc/obj/Debug/" />
 				<Option type="0" />
 				<Option compiler="msvc" />
@@ -38,7 +38,7 @@
 				</Linker>
 			</Target>
 			<Target title="MSVC_Release">
-				<Option output=".cmp/msvc/bin/Release/portaclip" prefix_auto="0" extension_auto="1" />
+				<Option output=".cmp/msvc/bin/Release/portaclip2" prefix_auto="0" extension_auto="1" />
 				<Option object_output=".cmp/msvc/obj/Release/" />
 				<Option type="0" />
 				<Option compiler="msvc" />
@@ -69,7 +69,7 @@
 				</ExtraCommands>
 			</Target>
 			<Target title="GCC_Debug">
-				<Option output=".cmp/gcc/portaclipd" prefix_auto="0" extension_auto="1" />
+				<Option output=".cmp/gcc/portaclip2d" prefix_auto="0" extension_auto="1" />
 				<Option object_output=".cmp/gcc/obj/Debug/" />
 				<Option type="0" />
 				<Option compiler="gcc_generic" />
@@ -89,17 +89,17 @@
 				</Linker>
 			</Target>
 			<Target title="GCC_Release">
-				<Option output=".cmp/gcc/portaclip" prefix_auto="0" extension_auto="1" />
+				<Option output=".cmp/gcc/portaclip2" prefix_auto="0" extension_auto="1" />
 				<Option object_output=".cmp/gcc/obj/Release/" />
 				<Option type="0" />
 				<Option compiler="gcc_generic" />
 				<Option projectLinkerOptionsRelation="2" />
 				<Compiler>
-					<Add option="-Os" />
 					<Add option="-std=c++11" />
 					<Add option="-W" />
 					<Add option="-fPIC" />
 					<Add option="-fexceptions" />
+					<Add option="-Os" />
 					<Add option="`$(#wx.config) --cxxflags`" />
 					<Add option="-DNOPCH" />
 				</Compiler>
@@ -108,7 +108,6 @@
 				</Linker>
 				<ExtraCommands>
 					<Add before="rm -f $(TARGET_OUTPUT_FILE)" />
-					<Add after="upx $(TARGET_OUTPUT_FILE)" />
 					<Add after="$(CPDE_USR)/bin/cpde_usr -bin -xi -project=$(PROJECT_NAME)  -root=$(PROJECT_DIR)  -build=$(TARGET_NAME)  -target=$(TARGET_OUTPUT_FILE)  -usr=$(CPDE_USR)" />
 					<Mode after="always" />
 				</ExtraCommands>
@@ -125,24 +124,24 @@
 			<Add directory="$(CPDE_USR)/lib" />
 			<Add directory="$(#boost.lib)" />
 		</Linker>
-		<Unit filename="portaclipApp.cpp" />
-		<Unit filename="portaclipApp.h" />
-		<Unit filename="portaclipMain.cpp" />
-		<Unit filename="portaclipMain.h" />
+		<ExtraCommands>
+			<Add before="[[ GetProjectManager().SaveAllProjects(); ]]" />
+		</ExtraCommands>
+		<Unit filename="portaclip2App.cpp" />
+		<Unit filename="portaclip2App.h" />
+		<Unit filename="portaclip2Main.cpp" />
+		<Unit filename="portaclip2Main.h" />
 		<Unit filename="resource.rc">
 			<Option compilerVar="WINDRES" />
 		</Unit>
-		<Unit filename="wxsmith/portaclipdialog.wxs" />
+		<Unit filename="wxsmith/portaclip2dialog.wxs" />
 		<Extensions>
-			<code_completion />
-			<envvars />
 			<wxsmith version="1">
-				<gui name="wxWidgets" src="portaclipApp.cpp" main="portaclipDialog" init_handlers="necessary" language="CPP" />
+				<gui name="wxWidgets" src="portaclip2App.cpp" main="portaclip2Dialog" init_handlers="necessary" language="CPP" />
 				<resources>
-					<wxDialog wxs="wxsmith/portaclipdialog.wxs" src="portaclipMain.cpp" hdr="portaclipMain.h" fwddecl="0" i18n="1" name="portaclipDialog" language="CPP" />
+					<wxDialog wxs="wxsmith/portaclip2dialog.wxs" src="portaclip2Main.cpp" hdr="portaclip2Main.h" fwddecl="0" i18n="1" name="portaclip2Dialog" language="CPP" />
 				</resources>
 			</wxsmith>
-			<debugger />
 		</Extensions>
 	</Project>
 </CodeBlocks_project_file>
