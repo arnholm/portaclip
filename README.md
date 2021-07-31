@@ -1,3 +1,7 @@
+# Don'r use this code
+
+use https://github.com/debauchee/barrier instead
+
 # portaclip
 A portable clipboard sharing utility for Linux and Windows
 
