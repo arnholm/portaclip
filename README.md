@@ -1,4 +1,4 @@
-# Don'r use this code
+# Don't use this code
 
 use https://github.com/debauchee/barrier instead
 
